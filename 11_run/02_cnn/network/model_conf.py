@@ -4,12 +4,12 @@ import os
 
 from model_para import *
 
-from cnn_bl_time_conf import *
-from cnn_bl_freq_conf import *
+#from cnn_bl_time_conf import *
+#from cnn_bl_freq_conf import *
 from cnn_bl_conf import *
-from cnn_inct_conf import *
+#from cnn_inct_conf import *
 
-from dnn_bl01_conf import *
+#from dnn_bl01_conf import *
 from dnn_bl02_conf import *
 
 from nn_basic_layers import *
@@ -44,7 +44,7 @@ class model_conf(object):
 
         # Call DNN 
         with tf.device('/gpu:0'), tf.variable_scope("dnn_01")as scope:
-            self.dnn_bl01_ins_01 = dnn_bl01_conf(self.merge_data, 512, self.mode)
+            self.dnn_bl01_ins_01 = dnn_bl02_conf(self.merge_data, 512, self.mode)
 
         with tf.device('/gpu:0'), tf.variable_scope("output")as scope:
             # ======================================  Output =================================== #

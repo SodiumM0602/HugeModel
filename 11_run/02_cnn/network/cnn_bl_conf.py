@@ -3,6 +3,7 @@ import numpy as np
 import os
 from cnn_bl_para  import *
 
+#fixed
 #======================================================================================================#
 
 class cnn_bl_conf(object):
@@ -127,64 +128,64 @@ class cnn_bl_conf(object):
                                                    self.mode,
                                                    scope=scope
                                                   ) 
-#        ### ======== LAYER 05
-#        with tf.device('/gpu:0'), tf.variable_scope("cnn_conv05")as scope:
-#             [self.output_layer05, self.mid_layer05] = self.conv_layer(
-#                                                   self.output_layer04,
-#
-#                                                   self.cnn_para.l05_filter_height,
-#                                                   self.cnn_para.l05_filter_width,
-#                                                   self.cnn_para.l05_pre_filter_num,
-#                                                   self.cnn_para.l05_filter_num,
-#                                                   self.cnn_para.l05_conv_padding,
-#                                                   self.cnn_para.l05_conv_stride,
-#
-#                                                   self.cnn_para.l05_is_norm,
-#
-#                                                   self.cnn_para.l05_conv_act_func,
-#
-#                                                   self.cnn_para.l05_is_pool,
-#                                                   self.cnn_para.l05_pool_type,
-#                                                   self.cnn_para.l05_pool_padding,
-#                                                   self.cnn_para.l05_pool_stride,
-#                                                   self.cnn_para.l05_pool_ksize,
-#
-#                                                   self.cnn_para.l05_is_drop,
-#                                                   self.cnn_para.l05_drop_prob,
-#
-#                                                   self.mode,
-#                                                   scope=scope
-#                                                  ) 
-#        ### ======== LAYER 06
-#        with tf.device('/gpu:0'), tf.variable_scope("cnn_conv06")as scope:
-#             [self.output_layer06, self.mid_layer06] = self.conv_layer(
-#                                                   self.output_layer05,
-#
-#                                                   self.cnn_para.l06_filter_height,
-#                                                   self.cnn_para.l06_filter_width,
-#                                                   self.cnn_para.l06_pre_filter_num,
-#                                                   self.cnn_para.l06_filter_num,
-#                                                   self.cnn_para.l06_conv_padding,
-#                                                   self.cnn_para.l06_conv_stride,
-#
-#                                                   self.cnn_para.l06_is_norm,
-#
-#                                                   self.cnn_para.l06_conv_act_func,
-#
-#                                                   self.cnn_para.l06_is_pool,
-#                                                   self.cnn_para.l06_pool_type,
-#                                                   self.cnn_para.l06_pool_padding,
-#                                                   self.cnn_para.l06_pool_stride,
-#                                                   self.cnn_para.l06_pool_ksize,
-#
-#                                                   self.cnn_para.l06_is_drop,
-#                                                   self.cnn_para.l06_drop_prob,
-#
-#                                                   self.mode,
-#                                                   scope=scope
-#                                                  ) 
+        ### ======== LAYER 05
+        with tf.device('/gpu:0'), tf.variable_scope("cnn_conv05")as scope:
+             [self.output_layer05, self.mid_layer05] = self.conv_layer(
+                                                   self.output_layer04,
 
-             self.final_output = self.output_layer04
+                                                   self.cnn_para.l05_filter_height,
+                                                   self.cnn_para.l05_filter_width,
+                                                   self.cnn_para.l05_pre_filter_num,
+                                                   self.cnn_para.l05_filter_num,
+                                                   self.cnn_para.l05_conv_padding,
+                                                   self.cnn_para.l05_conv_stride,
+
+                                                   self.cnn_para.l05_is_norm,
+
+                                                   self.cnn_para.l05_conv_act_func,
+
+                                                   self.cnn_para.l05_is_pool,
+                                                   self.cnn_para.l05_pool_type,
+                                                   self.cnn_para.l05_pool_padding,
+                                                   self.cnn_para.l05_pool_stride,
+                                                   self.cnn_para.l05_pool_ksize,
+
+                                                   self.cnn_para.l05_is_drop,
+                                                   self.cnn_para.l05_drop_prob,
+
+                                                   self.mode,
+                                                   scope=scope
+                                                  ) 
+        ### ======== LAYER 06
+        with tf.device('/gpu:0'), tf.variable_scope("cnn_conv06")as scope:
+             [self.output_layer06, self.mid_layer06] = self.conv_layer(
+                                                   self.output_layer05,
+
+                                                   self.cnn_para.l06_filter_height,
+                                                   self.cnn_para.l06_filter_width,
+                                                   self.cnn_para.l06_pre_filter_num,
+                                                   self.cnn_para.l06_filter_num,
+                                                   self.cnn_para.l06_conv_padding,
+                                                   self.cnn_para.l06_conv_stride,
+
+                                                   self.cnn_para.l06_is_norm,
+
+                                                   self.cnn_para.l06_conv_act_func,
+
+                                                   self.cnn_para.l06_is_pool,
+                                                   self.cnn_para.l06_pool_type,
+                                                   self.cnn_para.l06_pool_padding,
+                                                   self.cnn_para.l06_pool_stride,
+                                                   self.cnn_para.l06_pool_ksize,
+
+                                                   self.cnn_para.l06_is_drop,
+                                                   self.cnn_para.l06_drop_prob,
+
+                                                   self.mode,
+                                                   scope=scope
+                                                  ) 
+
+             self.final_output = self.output_layer06
 
 ###==================================================== OTHER FUNCTION ============================
     #02/ CONV LAYER
